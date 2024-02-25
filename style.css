@@ -1,0 +1,281 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 14px;
+    background: f2f2f2;
+    background-image: url("Porject Image/background Picture.avif.jpg");
+}
+
+.container {
+    background: white;
+    width: 500px;
+    padding: 25px;
+    margin: 50px auto 0;
+    border-top: 5px solid blue;
+    box-shadow: 0 0 7px 5px rgba(0, 0, 0, 0.5);
+}
+
+.container h2 {
+    font-size: 24px;
+    line-height: 24px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.input-name {
+    width: 90%;
+    position: relative;
+    margin: 20px auto;
+}
+
+.lock {
+    padding: 8px 11px;
+}
+
+.name {
+    width: 45%;
+    padding: 8px 0 8px 40px;
+}
+
+.input-name span {
+    margin-left: 35px;
+}
+
+.text-name {
+    width: 100%;
+    padding: 8px 0 8px 40px;
+}
+
+.input-name i {
+    position: absolute;
+    font-size: 18px;
+    color: blue;
+    border-right: 1px solid #cccccc;
+}
+
+.email {
+    padding: 8px;
+}
+
+.text-name,
+.name {
+    border: 1px solid #cccccc;
+    outline: none;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -webkit-transition: all 0.30s ease-in-out;
+    transition: all 0.30s ease-in-out;
+}
+
+.text-name:hover,
+.name:hover {
+    background-color: #fafafa;
+}
+
+.text-name:focus,
+.name:focus {
+    border: 1px solid blue;
+}
+
+.radio-button {
+    margin-right: 4px;
+}
+
+.country {
+    width: 90%;
+    padding: 8px;
+    margin-left: 25px;
+}
+
+.countey {
+    display: inline-block;
+    width: 100%;
+    height: 35px;
+    padding: 0px 15px;
+    cursor: pointer;
+    border: 1px solid #cccccc;
+    color: 7b7b7b;
+    border-radius: 0;
+    background: white;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    transition: all 0.2s ease;
+}
+
+.countey::-ms-expand {
+    display: none;
+}
+
+.countey,
+:hover,
+.countey:focus {
+    color: blue;
+    background: #fafafa;
+    border-color: blue;
+    outline: none;
+}
+
+.arrow {
+    position: absolute;
+    top: calc(50%, - 4px);
+    right: 15px;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+    border-width: 8px 5px 0 5px;
+    border-style: solid;
+    border-color: #7b7b7b transparent transparent transparent;
+}
+
+.countey:hover+.arrow,
+.country:focus+.arrow {
+    border-top-color: blue;
+}
+
+.check {
+    margin-right: 15px;
+    position: relative;
+}
+
+.check::before {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-right: 8px;
+    vertical-align: -2px;
+    border: 2px solid #cccccc;
+    padding: 2.5px;
+    background-color: transparent;
+    background-clip: content-box;
+    transition: all 0.2s ease;
+}
+
+.check::after {
+    border-right: 2px solid black;
+    border-top: 2px solid black;
+    content: "";
+    height: 20px;
+    left: 2px;
+    position: absolute;
+    top: 7px;
+    transform: scaleX(-1) rotate(135deg);
+    transform-origin: left top;
+    width: 7px;
+    display: none;
+}
+
+.check button {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.check-button:hover+.check::before {
+    border-color: blue;
+}
+
+.check-button:checked+.check::before {
+    border-color: green;
+}
+
+.check-button:checked+.check::after {
+    -moz-animation: check 0.8s ease 0s running;
+    -webkit-animation: check 0.8s ease 0s running;
+    animation: check 0.8s ease 0s running;
+    display: block;
+    width: 7px;
+    height: 20px;
+    border-color: green;
+}
+
+@-webkit-keyframes check {
+    0% {
+        height: 0;
+        width: 0;
+    }
+    25% {
+        height: 0;
+        width: 7px;
+    }
+    50% {
+        height: 20px;
+        width: 7px;
+    }
+    75% {
+        height: 20px;
+        width: 7px;
+    }
+    100% {
+        height: 20px;
+        width: 7px;
+    }
+}
+
+@keyframes check {
+    0% {
+        height: 0;
+        width: 0;
+    }
+    25% {
+        height: 0;
+        width: 7px;
+    }
+    50% {
+        height: 20px;
+        width: 7px;
+    }
+    100% {
+        height: 20px;
+        width: 7px;
+    }
+}
+
+.button {
+    background-color: blue;
+    color: white;
+    height: 25px;
+    line-height: 25px;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.button:hover {
+    background: green;
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 100px;
+        padding: 5px;
+    }
+    .input-name {
+        margin-bottom: -10px;
+    }
+    .name {
+        width: 100%;
+        padding: 8px 0 8px 40px;
+        margin-bottom: 10px;
+    }
+    .input-name span {
+        padding: 0;
+        margin: 0;
+    }
+    .form-container {
+        width: 100%;
+    }
+}

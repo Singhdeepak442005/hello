@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+    <meta charset="utf-8">
+    <meta-name="viewport" -content="width=device-width-width, initial-scale=1">
+        <title>
+            Responsive Form By Cyber Warriorsk
+        </title>
+
+        <!-- Link By index.html, style.css, PHP.Debug, database.js-->
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/Debug" href="PHP.Debug">
+        <link rel="stylesheet" type="text/js" href="database.js">
+
+        <!-- Add icon library pick -->
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <h2>Registration Form</h2>
+        <div class="form-container"></div>
+        <form action="submit.php" method="post">
+
+            <!-- Your form fields here -->
+
+            <div class="input-name">
+                <i class="fa fa-user lock"></i>
+                <input type="text" placeholder=" Fast Name" class="name" onkeypress="return(event.charCode >64 && event.charCode<91)|| (event.charCode>96 && event.charCode<123)">
+
+                <span> 
+                    <i class="fa fa-user lock"></i> 
+                    <input type="text" placeholder=" Last Name" class="name" onkeypress="return(event.charCode >64 && event.charCode<91)|| (event.charCode>96 && event.charCode<123)"> 
+                </span>
+            </div>
+
+
+            <div class="input-name">
+                <i class="fa fa-envelope email"></i>
+                <input type="email" placeholder="Email" class="text-name">
+            </div>
+
+
+            <div class="input-name">
+                <i class="fa fa-lock lock"></i>
+                <input type="password" placeholder="Enter Password" class="text-name">
+            </div>
+
+
+            <div class="input-name">
+                <i class="fa fa-lock lock"></i>
+                <input type="password" placeholder="Enter Confirm Password" class="text-name">
+            </div>
+
+
+            <div class="input-name">
+                <input type="radio" name="d1" class="radio-button">
+                <label> Male</label>
+
+                <input type="radio" name="d1" class="radio-button">
+                <label> Female</label>
+                <input type="radio" name="d1" class="radio-button">
+                <label> Other</label>
+            </div>
+
+            <div>
+                <select class="country"> 
+                    <option>Select a Country</option> 
+                    <option>Africa</option> 
+                    <option>Australia</option> 
+                    <option>India</option> 
+                    <option>Londan</option> 
+                    <option>Nepal</option> 
+                    <option>Netherlands</option> 
+                    <option>South Africa</option> 
+                    <option>Sri Lanka</option> 
+                    <option>USA</option> 
+                </select>
+            </div>
+
+            <div class="input-name">
+                <input type="checkbox" id="de" class="check-button">
+                <label for="de" class="check">I Accept the terms and conditions</label>
+            </div>
+
+            <div class="input-name">
+                <!--<input type="submit" value="Submit"> -->
+                <input type="submit" value="Register" class="button">
+
+
+                <!-- Other fields -->
+            </div>
+
+        </form>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<?php
+// Establish database connection
+$servername = "localhost"; // Your database server name
+$username = "username"; // Your database username
+$password = "password"; // Your database password
+$dbname = "your_database_name"; // Your database name
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Get form data
+$first_name = $_POST['first_name']; // Assuming 'first_name' is the name attribute of the input field for first name
+$last_name = $_POST['last_name']; // Assuming 'first_name' is the name attribute of the input field for last name
+// Retrieve other form fields...
+
+// Insert data into database
+$sql = "INSERT INTO your_table_name (first_name, last_name) VALUES ('$first_name', '$last_name')";
+// Modify this query to include other form fields as needed
+
+if ($conn->query($sql) === TRUE) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
+// Close connection
+$conn->close();
+?>
